@@ -1,4 +1,4 @@
 - name: Create a file
   file:
-    path: "/var/wwww/html/index.html"
+    path: "/var/www/html/index.html"
     state: touch
