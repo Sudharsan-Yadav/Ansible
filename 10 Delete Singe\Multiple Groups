@@ -1,0 +1,22 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create a new group
+      group: name=India state=absent
+
+    - name: Create an another group
+      group:
+        name: US
+        state: absent
+
+    - name: Create multiple groups
+      group: name={{item}} state=absent
+      with_items:
+        - Russia
+        - China
+        - Japan
+        - Nepal
+        - France
+...
