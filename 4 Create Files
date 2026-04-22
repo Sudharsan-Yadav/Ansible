@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create a new file
+      file: path="/root/flm.txt" state=touch
+
+    - name: Create another file
+      file:
+        path: "/root/Jenkins.txt"
+        state: touch
+...
