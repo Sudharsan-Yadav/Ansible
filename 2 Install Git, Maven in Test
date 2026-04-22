@@ -1,0 +1,9 @@
+- hosts: test
+  connection: ssh
+
+  tasks:
+    - name: Insatlling git in the server2
+      yum: name=git state=present
+
+    - name: Installing maven in the server2
+      yum: name=maven state=present
