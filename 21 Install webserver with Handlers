@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Install webserver
+      yum: name=httpd state=present
+      notify: start webserver
+
+  handlers:
+    - name: start webserver
+      service: name=httpd state=started
+...
