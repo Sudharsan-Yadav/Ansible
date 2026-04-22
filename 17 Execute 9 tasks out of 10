@@ -1,0 +1,25 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Install scm tool
+      yum: name=git state=present
+
+    - name: Install java
+      yum: name=java-17-amazon-corretto state=present
+      tags: java
+
+    - name: Install maven
+      yum: name=maven state=present
+      tags: buildtool
+
+    - name: Install httpd
+      yum: name=httpd state=present
+...
+
+
+---------------------------------------------------------------------------
+
+ansible-playbook me.yaml --skip-tags=buildtool
+ansible-playbook me.yaml --skip-tags="buildtool,java"
