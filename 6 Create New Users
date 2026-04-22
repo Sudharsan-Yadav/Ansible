@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create a new user
+      user: name=sudheer state=present
+
+    - name: Create an another user
+      user:
+        name: sudhan
+        state: present
+...
