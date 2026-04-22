@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create a file inside the folder
+      file: path="/root/Devops/Dockerfile" state=touch
+
+    - name: Create another file inside an another folder
+      file:
+        path: "/root/Country/India"
+        state: touch
+...
