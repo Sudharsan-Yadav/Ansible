@@ -4,7 +4,7 @@
 
   tasks:
     - name: Create a new user
-      user: name=sai state=present
+      user: name=company state=present
 
     - name: Create multiple users
       user: name={{item}} state=present
