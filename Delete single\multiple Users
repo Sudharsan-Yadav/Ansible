@@ -1,0 +1,17 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create a new user
+      user: name=sai state=absent
+
+    - name: Create multiple users
+      user: name={{item}} state=absent
+      with_items:
+        - TCS
+        - Wipro
+        - Infosys
+        - CTS
+        - Capgemini
+...
