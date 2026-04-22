@@ -1,4 +1,5 @@
 #target_section
+---
 - hosts: dev
   connection: ssh
 
@@ -6,3 +7,4 @@
   tasks:
     - name: Insatlling git in the server1
       yum: name=git state=present                             
+...
