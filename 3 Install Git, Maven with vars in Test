@@ -1,0 +1,13 @@
+- hosts: test
+  connection: ssh
+
+  vars:
+    - abc: "git"
+    - xyz: "maven"
+
+  tasks:
+    - name: Insatlling git in the server2
+      yum: name={{abc}} state=present
+
+    - name: Installing maven in the server2
+      yum: name={{xyz}} state=present
