@@ -23,3 +23,6 @@
 
     - name: Installing maven in the server2
       yum: name={{xyz}} state=present
+
+
+ansible-playbook new.yaml --extra-vars="abc=git xyz=maven"
