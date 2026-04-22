@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: ssh
+  
+  roles:
+    - siva
+    - subhu
+    - sudheer
+... 
