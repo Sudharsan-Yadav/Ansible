@@ -1,0 +1,11 @@
+---
+- hosts: dev
+  connection: ssh
+
+  tasks:
+    - name: Install pip on dev server
+      yum: name=python-pip state=present
+
+    - name: Install a boto module on dev
+      pip: name=boto3
+...
