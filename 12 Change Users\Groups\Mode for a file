@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create another file inside an another folder
+      file:
+        path: "/root/Country/India"
+        state: touch
+        owner: sudhan
+        group: ec2-user
+        mode: 777
+...
