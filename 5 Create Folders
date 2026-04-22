@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Create a new folder
+      file: path="/root/f1" state=directory
+
+    - name: Create another folder
+      file:
+        path: "/root/f2"
+        state: directory
+...
