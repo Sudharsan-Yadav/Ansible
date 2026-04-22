@@ -1,0 +1,5 @@
+- name: Add some data
+  copy:
+    dest: "/var/www/html/index.html"
+    content:
+      <h1>Welcometo Ansible roles concept</h1>
