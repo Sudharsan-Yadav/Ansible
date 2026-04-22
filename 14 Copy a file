@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Copy a file
+      copy:
+        src: "/root/new.yaml"
+        dest: "/opt"
+...
