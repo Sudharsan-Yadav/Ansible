@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Check the user details
+      command: id sudhan
+      register: abc
+
+    - debug:
+        msg: "The user details are {{abc.stdout}}"
+...
