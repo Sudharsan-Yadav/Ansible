@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: Getting code from github
+      git:
+        repo: "https://github.com/Sudharsan-Yadav/Ansible.git"
+        dest: "/root/mycode"
+        version: main
+...
