@@ -1,3 +1,4 @@
+---
 - hosts: test
   connection: ssh
 
@@ -7,10 +8,12 @@
 
     - name: Installing maven in the server2
       yum: name=maven state=present
+...
 
 
 ---------------------------(or)---------------------------------
 
+---
 - hosts: test
   connection: ssh
 
@@ -20,3 +23,4 @@
 
     - name: Installing maven in the server2
       action: yum name=maven state=present
+...
